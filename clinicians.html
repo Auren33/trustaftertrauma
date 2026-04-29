@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Clinicians — Compass Recovery Model Certification | Trust After Trauma</title>
+<meta name="description" content="Get trained and certified in the Compass Recovery Model. Three credential tiers for therapists, counselors, and coaches working with betrayal trauma clients.">
+<link rel="canonical" href="https://trustaftertrauma.com/clinicians">
+<link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500,600,700&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+<style>
+/* ─── TOKENS ─────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --green:   #5A8A6A;
+  --green-d: #4A7559;
+  --terra:   #C4836A;
+  --terra-d: #A86E57;
+  --cream:   #FAF8F5;
+  --surface: #FDFCFA;
+  --surface2:#F5F2ED;
+  --border:  rgba(45,43,38,.12);
+  --text:    #2D2B26;
+  --muted:   #8A8780;
+  --faint:   #B8B5B0;
+  --display: 'Zodiak', Georgia, serif;
+  --body:    'Satoshi', 'Helvetica Neue', sans-serif;
+  --radius:  0.75rem;
+  --full:    9999px;
+  --trans:   180ms cubic-bezier(.16,1,.3,1);
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--body); color: var(--text);
+  background: var(--cream); -webkit-font-smoothing: antialiased;
+  line-height: 1.65;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ─── LAYOUT ─────────────────────────────────────── */
+.wrap { max-width: 1120px; width: 92%; margin: 0 auto; }
+.wrap--narrow { max-width: 720px; }
+section { padding: 80px 0; }
+.label {
+  font-size: .75rem; font-weight: 700; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--green); margin-bottom: .75rem;
+  display: block;
+}
+.rule { width: 32px; height: 2px; background: var(--green);
+  margin-bottom: 1.25rem; }
+h1,h2,h3,h4 { font-family: var(--display); font-weight: 500; line-height: 1.15; }
+h2 { font-size: clamp(1.75rem, 1rem + 2.5vw, 3rem); }
+h3 { font-size: clamp(1.25rem, .9rem + 1vw, 1.75rem); }
+p.lead { font-size: clamp(1rem, .85rem + .75vw, 1.25rem);
+  color: var(--muted); max-width: 600px; }
+
+/* ─── BUTTONS ────────────────────────────────────── */
+.btn {
+  display: inline-block; padding: .875rem 2rem;
+  border-radius: var(--full); font-family: var(--body);
+  font-weight: 600; font-size: .9375rem; transition: var(--trans);
+  cursor: pointer; border: none; text-align: center;
+}
+.btn-primary { background: var(--green); color: #fff; }
+.btn-primary:hover { background: var(--green-d); transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(90,138,106,.3); }
+.btn-terra { background: var(--terra); color: #fff; }
+.btn-terra:hover { background: var(--terra-d); transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(196,131,106,.3); }
+.btn-outline {
+  background: transparent; color: var(--green);
+  border: 1.5px solid var(--green);
+}
+.btn-outline:hover { background: var(--green); color: #fff; }
+
+/* ─── NAV ────────────────────────────────────────── */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(250,248,245,.95); backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px; height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav__logo {
+  font-family: var(--display); font-weight: 600; font-size: 1.1rem;
+  display: flex; flex-direction: column; line-height: 1.1;
+}
+.nav__logo small {
+  font-family: var(--body); font-size: .65rem; font-weight: 600;
+  letter-spacing: .15em; text-transform: uppercase; color: var(--green);
+}
+.nav__links { display: flex; gap: 2rem; align-items: center; font-size: .875rem; font-weight: 500; }
+.nav__links a:hover { color: var(--green); }
+.nav__links a.active { color: var(--green); }
+.nav__cta {
+  padding: .5rem 1.25rem; border-radius: var(--full);
+  background: var(--green); color: #fff; font-size: .875rem;
+  font-weight: 600; transition: var(--trans);
+}
+.nav__cta:hover { background: var(--green-d); }
+
+/* ─── HERO ───────────────────────────────────────── */
+.hero {
+  padding: 100px 0 80px;
+  background: linear-gradient(135deg, #EEF4F0 0%, var(--cream) 60%);
+  border-bottom: 1px solid var(--border);
+}
+.hero__eyebrow {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .375rem 1rem; border-radius: var(--full);
+  border: 1px solid var(--green); color: var(--green);
+  font-size: .8125rem; font-weight: 600; letter-spacing: .05em;
+  margin-bottom: 1.5rem;
+}
+.hero h1 { font-size: clamp(2.25rem, 1rem + 4vw, 4.5rem);
+  max-width: 820px; margin-bottom: 1.25rem; }
+.hero p.lead { margin-bottom: 2.5rem; }
+.hero__stats {
+  display: flex; gap: 3rem; flex-wrap: wrap;
+  padding-top: 3rem; border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+.hero__stat-n { font-family: var(--display); font-size: 2.25rem;
+  font-weight: 500; color: var(--green); line-height: 1; }
+.hero__stat-l { font-size: .875rem; color: var(--muted);
+  margin-top: .25rem; }
+
+/* ─── INTRO BAND ─────────────────────────────────── */
+.intro-band {
+  background: var(--green); color: #fff;
+  padding: 60px 0;
+}
+.intro-band__grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; align-items: center;
+}
+.intro-band h2 { color: #fff; }
+.intro-band p { color: rgba(255,255,255,.8); margin-top: 1rem; font-size: 1.0625rem; }
+.intro-band__list { list-style: none; margin-top: 1.5rem; display: flex; flex-direction: column; gap: .75rem; }
+.intro-band__list li {
+  display: flex; gap: .75rem; align-items: flex-start;
+  color: rgba(255,255,255,.9); font-size: .9375rem;
+}
+.intro-band__list li::before {
+  content: '✓'; color: #fff; font-weight: 700;
+  flex-shrink: 0; margin-top: .05rem;
+}
+
+/* ─── COMPASS STAGES ─────────────────────────────── */
+.stages { background: var(--surface2); }
+.stages__grid {
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  gap: 1rem; margin-top: 3rem;
+}
+.stage-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.5rem 1.25rem;
+  text-align: center; transition: var(--trans);
+}
+.stage-card:hover { border-color: var(--green);
+  box-shadow: 0 4px 16px rgba(90,138,106,.1); }
+.stage-card__dir {
+  font-size: .75rem; font-weight: 700; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--green); margin-bottom: .5rem;
+}
+.stage-card__name { font-family: var(--display); font-size: 1.0625rem;
+  font-weight: 500; margin-bottom: .4rem; }
+.stage-card__sub { font-size: .8125rem; color: var(--muted); line-height: 1.4; }
+
+/* ─── TIERS ──────────────────────────────────────── */
+.tiers__grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; margin-top: 3rem; align-items: start;
+}
+.tier-card {
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: 1rem; padding: 2rem 1.75rem;
+  display: flex; flex-direction: column; gap: 1.25rem;
+  transition: var(--trans); position: relative;
+}
+.tier-card:hover { border-color: var(--green);
+  box-shadow: 0 8px 32px rgba(90,138,106,.12); }
+.tier-card.featured {
+  border-color: var(--green);
+  box-shadow: 0 8px 32px rgba(90,138,106,.12);
+}
+.tier-badge {
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--green); color: #fff; font-size: .75rem;
+  font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  padding: .25rem .875rem; border-radius: var(--full); white-space: nowrap;
+}
+.tier-card__level { font-size: .75rem; font-weight: 700; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--green); }
+.tier-card__name { font-family: var(--display); font-size: 1.5rem; font-weight: 500; }
+.tier-card__price { display: flex; align-items: baseline; gap: .25rem; }
+.tier-card__price .amt {
+  font-family: var(--display); font-size: 2.5rem;
+  font-weight: 500; color: var(--text); line-height: 1;
+}
+.tier-card__price .orig {
+  font-size: .875rem; color: var(--faint);
+  text-decoration: line-through; margin-left: .5rem;
+}
+.tier-card__price .tag {
+  font-size: .75rem; color: var(--terra); font-weight: 600;
+  background: rgba(196,131,106,.12); padding: .2rem .6rem;
+  border-radius: var(--full); margin-left: .5rem;
+}
+.tier-card__desc { font-size: .9375rem; color: var(--muted); line-height: 1.6; }
+.tier-card__includes { font-size: .8125rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .1em;
+  color: var(--faint); margin-top: .25rem; }
+.tier-card__list { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+.tier-card__list li {
+  display: flex; gap: .625rem; align-items: flex-start;
+  font-size: .9rem; color: var(--text);
+}
+.tier-card__list li .chk {
+  width: 16px; height: 16px; border-radius: 50%;
+  background: rgba(90,138,106,.15); color: var(--green);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: .65rem; font-weight: 700;
+  margin-top: .15rem;
+}
+.tier-card__footer { margin-top: auto; padding-top: 1.25rem;
+  border-top: 1px solid var(--border); }
+.tier-card__note { font-size: .8rem; color: var(--muted); margin-top: .625rem; text-align: center; }
+
+/* ─── FACILITATOR LICENSE ─────────────────────────── */
+.facilitator {
+  background: linear-gradient(135deg, #2D2B26 0%, #3d3a34 100%);
+  color: #fff;
+}
+.facilitator__inner {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; align-items: center;
+}
+.facilitator .label { color: var(--terra); }
+.facilitator h2 { color: #fff; }
+.facilitator p { color: rgba(255,255,255,.75); margin-top: .875rem; font-size: 1.0625rem; }
+.facilitator__math {
+  background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius); padding: 1.75rem; margin-top: 1.75rem;
+}
+.facilitator__math h4 {
+  font-family: var(--display); font-size: 1.125rem; color: #fff;
+  margin-bottom: 1rem; font-weight: 500;
+}
+.math-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: .625rem 0; border-bottom: 1px solid rgba(255,255,255,.08);
+  font-size: .9rem;
+}
+.math-row:last-child { border-bottom: none; font-weight: 600; color: var(--terra); }
+.math-row .label-m { color: rgba(255,255,255,.7); }
+.math-row .val { color: #fff; }
+.facilitator__card {
+  background: rgba(255,255,255,.06); border: 1.5px solid rgba(90,138,106,.4);
+  border-radius: 1rem; padding: 2rem;
+}
+.facilitator__card h3 { font-family: var(--display); font-size: 1.5rem;
+  color: #fff; margin-bottom: .5rem; font-weight: 500; }
+.facilitator__card .price-big {
+  font-family: var(--display); font-size: 3rem; font-weight: 500;
+  color: var(--terra); line-height: 1; margin: .75rem 0 .25rem;
+}
+.facilitator__card .price-note { font-size: .875rem; color: rgba(255,255,255,.55); }
+.fac-list { list-style: none; margin: 1.5rem 0; display: flex; flex-direction: column; gap: .625rem; }
+.fac-list li { display: flex; gap: .75rem; align-items: flex-start;
+  font-size: .9rem; color: rgba(255,255,255,.8); }
+.fac-list li::before { content: '→'; color: var(--green); flex-shrink: 0; margin-top: .05rem; }
+.fac-req { font-size: .8rem; color: rgba(255,255,255,.45);
+  margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,.1); }
+
+/* ─── DIRECTORY ──────────────────────────────────── */
+.directory { background: var(--surface2); }
+.directory__grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem; margin-top: 2.5rem;
+}
+.dir-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.5rem;
+}
+.dir-card__icon { font-size: 1.5rem; margin-bottom: .875rem; }
+.dir-card h4 { font-family: var(--display); font-size: 1.125rem;
+  font-weight: 500; margin-bottom: .5rem; }
+.dir-card p { font-size: .875rem; color: var(--muted); line-height: 1.6; }
+
+/* ─── PROCESS ────────────────────────────────────── */
+.process__steps {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 2rem; margin-top: 3rem; position: relative;
+}
+.process__steps::before {
+  content: ''; position: absolute; top: 28px; left: 10%;
+  right: 10%; height: 1px; background: var(--border); z-index: 0;
+}
+.step { text-align: center; position: relative; z-index: 1; }
+.step__num {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--green); color: #fff;
+  font-family: var(--display); font-size: 1.25rem; font-weight: 500;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1rem; box-shadow: 0 0 0 6px var(--cream);
+}
+.step h4 { font-family: var(--display); font-size: 1.0625rem;
+  font-weight: 500; margin-bottom: .375rem; }
+.step p { font-size: .875rem; color: var(--muted); line-height: 1.5; }
+
+/* ─── FAQ ────────────────────────────────────────── */
+.faq { background: var(--surface2); }
+.faq__grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1rem; margin-top: 2.5rem;
+}
+.faq-item {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.5rem;
+}
+.faq-item h4 { font-family: var(--display); font-size: 1rem;
+  font-weight: 500; margin-bottom: .625rem; }
+.faq-item p { font-size: .875rem; color: var(--muted); line-height: 1.65; }
+
+/* ─── APPLICATION CTA ────────────────────────────── */
+.apply {
+  background: var(--green); color: #fff;
+  padding: 80px 0; text-align: center;
+}
+.apply h2 { color: #fff; margin-bottom: 1rem; }
+.apply p { color: rgba(255,255,255,.8); max-width: 560px;
+  margin: 0 auto 2rem; font-size: 1.0625rem; }
+.apply__btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.btn-white { background: #fff; color: var(--green); }
+.btn-white:hover { background: rgba(255,255,255,.9); transform: translateY(-1px); }
+.btn-ghost { background: transparent; color: #fff;
+  border: 1.5px solid rgba(255,255,255,.5); }
+.btn-ghost:hover { border-color: #fff; }
+
+/* ─── FOOTER ─────────────────────────────────────── */
+.footer {
+  background: var(--text); color: rgba(255,255,255,.65);
+  padding: 3rem 0 2rem;
+}
+.footer__grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem; padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer__brand { font-family: var(--display); font-size: 1.1rem;
+  color: #fff; font-weight: 500; margin-bottom: .5rem; }
+.footer__tagline { font-size: .875rem; }
+.footer__col-title { font-size: .8125rem; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: rgba(255,255,255,.45); margin-bottom: 1rem; }
+.footer__links { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
+.footer__links a { font-size: .875rem; transition: var(--trans); }
+.footer__links a:hover { color: #fff; }
+.footer__bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 1.5rem; font-size: .8125rem; flex-wrap: wrap; gap: 1rem;
+}
+.footer__crisis { margin-top: 1rem; font-size: .8125rem; line-height: 1.7; }
+.footer__crisis a { color: rgba(255,255,255,.65); text-decoration: underline; text-underline-offset: 2px; }
+
+/* ─── RESPONSIVE ─────────────────────────────────── */
+@media (max-width: 900px) {
+  .nav__links { display: none; }
+  .intro-band__grid, .facilitator__inner { grid-template-columns: 1fr; gap: 2rem; }
+  .stages__grid { grid-template-columns: repeat(3, 1fr); }
+  .tiers__grid { grid-template-columns: 1fr; }
+  .process__steps { grid-template-columns: 1fr 1fr; }
+  .process__steps::before { display: none; }
+  .faq__grid { grid-template-columns: 1fr; }
+  .footer__grid { grid-template-columns: 1fr; gap: 2rem; }
+  .directory__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  section { padding: 56px 0; }
+  .hero { padding: 80px 0 56px; }
+  .stages__grid { grid-template-columns: 1fr 1fr; }
+  .directory__grid { grid-template-columns: 1fr; }
+  .hero__stats { gap: 2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <a href="/" class="nav__logo">
+    Trust After Trauma
+    <small>Compass Recovery Model</small>
+  </a>
+  <nav class="nav__links">
+    <a href="/">Home</a>
+    <a href="/clinicians.html" class="active">For Clinicians</a>
+    <a href="/#community">Community</a>
+    <a href="https://betrayalrecoverycompass.com" target="_blank" rel="noopener">The Model</a>
+  </nav>
+  <a href="#apply" class="nav__cta">Apply Now</a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="hero__eyebrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      For Clinicians &amp; Therapists
+    </span>
+    <h1>The clinical framework your betrayal trauma clients have been waiting for.</h1>
+    <p class="lead">Get trained and certified in the Compass Recovery Model — a five-stage, clinically grounded framework built for therapists, counselors, and coaches working with betrayal trauma clients.</p>
+    <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+      <a href="#tiers" class="btn btn-primary">View Certification Tiers</a>
+      <a href="#apply" class="btn btn-outline">Apply for Founding Cohort</a>
+    </div>
+    <div class="hero__stats">
+      <div>
+        <div class="hero__stat-n">1 in 4</div>
+        <div class="hero__stat-l">Americans experience betrayal trauma</div>
+      </div>
+      <div>
+        <div class="hero__stat-n">0</div>
+        <div class="hero__stat-l">Certified training programs dedicated to this population</div>
+      </div>
+      <div>
+        <div class="hero__stat-n">3 tiers</div>
+        <div class="hero__stat-l">From Trained to Certified Practitioner</div>
+      </div>
+      <div>
+        <div class="hero__stat-n">Founding</div>
+        <div class="hero__stat-l">Cohort pricing available now</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO BAND -->
+<section class="intro-band">
+  <div class="wrap">
+    <div class="intro-band__grid">
+      <div>
+        <span class="label" style="color:rgba(255,255,255,.6);">Why This Matters</span>
+        <div class="rule" style="background:rgba(255,255,255,.3);"></div>
+        <h2>Betrayal trauma is one of the most common presenting issues in therapy — and one of the least trained.</h2>
+        <p>Most therapy training programs spend hours on depression, anxiety, and OCD. Betrayal trauma — affecting tens of millions of partners, family members, and survivors — gets a paragraph, if that.</p>
+        <p style="margin-top:.875rem;">The Compass Recovery Model gives you a structured, evidence-informed framework for this work. Not just theory — a complete clinical map your clients can follow, stage by stage.</p>
+      </div>
+      <div>
+        <ul class="intro-band__list">
+          <li>A proprietary 5-stage framework mapped to trauma recovery timelines</li>
+          <li>Stage-specific assessment tools to use with clients in session</li>
+          <li>Curriculum you can license and use in your own practice</li>
+          <li>Listing in the Compass Clinician Directory — referred clients find you</li>
+          <li>Access to a growing network of Compass-trained clinicians</li>
+          <li>CE credit hours (application submitted)</li>
+          <li>Academic foundation: doctoral-level research validation in progress</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE COMPASS MODEL -->
+<section class="stages">
+  <div class="wrap">
+    <span class="label">The Framework</span>
+    <div class="rule"></div>
+    <h2>The Five Stages of the Compass Recovery Model</h2>
+    <p class="lead" style="margin-top:.75rem;">Each stage maps to a specific phase of betrayal trauma recovery — with corresponding clinical interventions, assessment criteria, and client tools.</p>
+    <div class="stages__grid">
+      <div class="stage-card">
+        <div class="stage-card__dir">Center</div>
+        <div class="stage-card__name">Discovery Shock</div>
+        <div class="stage-card__sub">The ICU Phase. Days to weeks. Priority: survival and stabilization.</div>
+      </div>
+      <div class="stage-card">
+        <div class="stage-card__dir">North</div>
+        <div class="stage-card__name">Stabilization</div>
+        <div class="stage-card__sub">Months 1–3. Nervous system regulation. Finding footing.</div>
+      </div>
+      <div class="stage-card">
+        <div class="stage-card__dir">East</div>
+        <div class="stage-card__name">Integration</div>
+        <div class="stage-card__sub">Making meaning. Deciding what the betrayal means for identity and relationship.</div>
+      </div>
+      <div class="stage-card">
+        <div class="stage-card__dir">South</div>
+        <div class="stage-card__name">Healing</div>
+        <div class="stage-card__sub">Rebuilding trust, intimacy, and self-relationship — whether staying or leaving.</div>
+      </div>
+      <div class="stage-card">
+        <div class="stage-card__dir">West</div>
+        <div class="stage-card__name">Beyond Betrayal</div>
+        <div class="stage-card__sub">Year 1+. Transformation. A new chapter with a rebuilt sense of self.</div>
+      </div>
+    </div>
+    <p style="margin-top:2rem; font-size:.875rem; color:var(--muted);">
+      Built on Betrayal Trauma Theory (Freyd), EFT (Johnson), somatic therapy (Levine, van der Kolk), and CBT-based affair recovery frameworks (Snyder &amp; Gordon). Validated through doctoral research at MSTI.
+      <a href="https://betrayalrecoverycompass.com" target="_blank" rel="noopener" style="color:var(--green); font-weight:600; margin-left:.375rem;">Explore the full model →</a>
+    </p>
+  </div>
+</section>
+
+<!-- CERTIFICATION TIERS -->
+<section id="tiers">
+  <div class="wrap">
+    <span class="label">Certification</span>
+    <div class="rule"></div>
+    <h2>Three Credential Tiers</h2>
+    <p class="lead" style="margin-top:.75rem;">Start where you are. Build as your practice grows. Founding cohort pricing is available for a limited time.</p>
+    <div class="tiers__grid">
+
+      <!-- TIER 1 -->
+      <div class="tier-card">
+        <div class="tier-card__level">Level 1</div>
+        <div class="tier-card__name">Compass Trained</div>
+        <div class="tier-card__price">
+          <span class="amt">$1,500</span>
+          <span class="orig">$2,000</span>
+          <span class="tag">Founding</span>
+        </div>
+        <div class="tier-card__desc">The essential foundation. Understand the Compass Model, apply it with clients, and begin identifying recovery stages with confidence.</div>
+        <div class="tier-card__includes">What's Included</div>
+        <ul class="tier-card__list">
+          <li><span class="chk">✓</span>12 hours live training (virtual, cohort-based)</li>
+          <li><span class="chk">✓</span>Compass Model Clinician Manual (digital)</li>
+          <li><span class="chk">✓</span>Stage assessment tools for clinical use</li>
+          <li><span class="chk">✓</span>Session planning templates for each stage</li>
+          <li><span class="chk">✓</span>CE hours (application submitted)</li>
+          <li><span class="chk">✓</span>Compass Trained designation &amp; certificate</li>
+          <li><span class="chk">✓</span>Directory listing: Compass-Informed Clinician</li>
+          <li><span class="chk">✓</span>Access to Compass Clinician Community</li>
+        </ul>
+        <div class="tier-card__footer">
+          <a href="#apply" class="btn btn-outline" style="width:100%; display:block; text-align:center;">Apply for Level 1</a>
+          <p class="tier-card__note">Payment plans available · 3 × $550</p>
+        </div>
+      </div>
+
+      <!-- TIER 2 -->
+      <div class="tier-card featured">
+        <div class="tier-badge">Most Popular</div>
+        <div class="tier-card__level">Level 2</div>
+        <div class="tier-card__name">Compass Practitioner</div>
+        <div class="tier-card__price">
+          <span class="amt">$3,500</span>
+          <span class="orig">$4,500</span>
+          <span class="tag">Founding</span>
+        </div>
+        <div class="tier-card__desc">Deep clinical competency. Includes Level 1 plus advanced intervention training, supervision hours, and the Group Facilitator License to run Compass groups in your practice.</div>
+        <div class="tier-card__includes">Everything in Level 1, plus</div>
+        <ul class="tier-card__list">
+          <li><span class="chk">✓</span>24 additional training hours (advanced modules)</li>
+          <li><span class="chk">✓</span>6 hours group supervision with Megan Burton</li>
+          <li><span class="chk">✓</span>Stage-specific somatic intervention training</li>
+          <li><span class="chk">✓</span>Couples track training module</li>
+          <li><span class="chk">✓</span><strong>Compass Recovery Group Facilitator License</strong> (1 year, $750 value)</li>
+          <li><span class="chk">✓</span>Run licensed Compass groups in your practice</li>
+          <li><span class="chk">✓</span>Featured directory listing: Compass Practitioner</li>
+          <li><span class="chk">✓</span>Access to full curriculum materials library</li>
+        </ul>
+        <div class="tier-card__footer">
+          <a href="#apply" class="btn btn-primary" style="width:100%; display:block; text-align:center;">Apply for Level 2</a>
+          <p class="tier-card__note">Payment plans available · 3 × $1,250</p>
+        </div>
+      </div>
+
+      <!-- TIER 3 -->
+      <div class="tier-card">
+        <div class="tier-card__level">Level 3</div>
+        <div class="tier-card__name">Compass Certified</div>
+        <div class="tier-card__price">
+          <span class="amt">$5,000</span>
+          <span class="orig">$7,000</span>
+          <span class="tag">Founding</span>
+        </div>
+        <div class="tier-card__desc">The highest credential. Full certification after supervised clinical work, case consultation, and comprehensive review. Positions you as a leading specialist in betrayal trauma recovery.</div>
+        <div class="tier-card__includes">Everything in Levels 1 &amp; 2, plus</div>
+        <ul class="tier-card__list">
+          <li><span class="chk">✓</span>50 supervised clinical hours (documentation)</li>
+          <li><span class="chk">✓</span>12 hours individual consultation with Megan</li>
+          <li><span class="chk">✓</span>Recorded session review and feedback</li>
+          <li><span class="chk">✓</span>Case conceptualization portfolio</li>
+          <li><span class="chk">✓</span>Certified Compass Clinician (CCC) designation</li>
+          <li><span class="chk">✓</span>Top-tier directory placement + profile page</li>
+          <li><span class="chk">✓</span>Facilitator License (lifetime, $750/yr value)</li>
+          <li><span class="chk">✓</span>Co-marketing and referral partner status</li>
+        </ul>
+        <div class="tier-card__footer">
+          <a href="#apply" class="btn btn-outline" style="width:100%; display:block; text-align:center;">Apply for Level 3</a>
+          <p class="tier-card__note">Payment plans available · 5 × $1,100</p>
+        </div>
+      </div>
+
+    </div>
+    <p style="margin-top:2rem; text-align:center; font-size:.875rem; color:var(--muted);">
+      Annual recertification: $500/year · Maintains your designation, access, and directory listing
+    </p>
+  </div>
+</section>
+
+<!-- FACILITATOR LICENSE -->
+<section class="facilitator">
+  <div class="wrap">
+    <div class="facilitator__inner">
+      <div>
+        <span class="label">Group Facilitator License</span>
+        <div class="rule" style="background:rgba(255,255,255,.3);"></div>
+        <h2>Run Compass Recovery Groups in your own practice.</h2>
+        <p>The Group Facilitator License gives Level 2 and Level 3 certified clinicians the right to run licensed Compass Recovery Groups using the official curriculum, assessment tools, and TAT branding.</p>
+        <p style="margin-top:.875rem;">You charge your clients. You keep your revenue. You run the groups on your own schedule. You pay an annual license fee that keeps you current with the model and listed in the directory.</p>
+        <div class="facilitator__math">
+          <h4>Example: One Clinician, One Group</h4>
+          <div class="math-row">
+            <span class="label-m">Group size</span>
+            <span class="val">8 clients</span>
+          </div>
+          <div class="math-row">
+            <span class="label-m">Session fee</span>
+            <span class="val">$75/session</span>
+          </div>
+          <div class="math-row">
+            <span class="label-m">Sessions per cohort</span>
+            <span class="val">12 weeks</span>
+          </div>
+          <div class="math-row">
+            <span class="label-m">Groups per year</span>
+            <span class="val">2 cohorts</span>
+          </div>
+          <div class="math-row">
+            <span class="label-m">Annual license fee</span>
+            <span class="val">$750</span>
+          </div>
+          <div class="math-row">
+            <span class="label-m">Net revenue (1 year)</span>
+            <span class="val">$14,400 − $750 = <strong>$13,650</strong></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="facilitator__card">
+          <span class="label" style="color:var(--terra);">Compass Recovery Group</span>
+          <h3>Facilitator License</h3>
+          <div class="price-big">$750</div>
+          <div class="price-note">per year · renews annually</div>
+          <ul class="fac-list">
+            <li>Full Compass Recovery Group curriculum (12-week)</li>
+            <li>Stage-specific session guides and worksheets</li>
+            <li>Client intake and assessment tools</li>
+            <li>TAT co-branding and marketing materials</li>
+            <li>Active listing in the Compass Clinician Directory</li>
+            <li>Quarterly facilitator support calls</li>
+            <li>Access to updated curriculum as model evolves</li>
+            <li>Priority support and case consultation</li>
+          </ul>
+          <a href="#apply" class="btn btn-terra" style="width:100%; text-align:center; display:block;">Apply for License</a>
+          <div class="fac-req">Requires: Compass Practitioner (Level 2) or Certified (Level 3) credential · Included in Level 2 &amp; 3 founding pricing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIRECTORY BENEFITS -->
+<section class="directory" id="directory">
+  <div class="wrap">
+    <span class="label">Clinician Directory</span>
+    <div class="rule"></div>
+    <h2>Get found by clients who are already looking for you.</h2>
+    <p class="lead" style="margin-top:.75rem;">Every certified clinician is listed in the Compass Clinician Directory on trustaftertrauma.com — where thousands of betrayal trauma survivors search for specialized support.</p>
+    <div class="directory__grid">
+      <div class="dir-card">
+        <div class="dir-card__icon">📍</div>
+        <h4>Searchable Profile</h4>
+        <p>Searchable by location, specialty, stage focus, and credential tier. Your profile includes a bio, credentials, and contact link.</p>
+      </div>
+      <div class="dir-card">
+        <div class="dir-card__icon">🔗</div>
+        <h4>Credentialed Referrals</h4>
+        <p>Clients referred from TAT's community and resources arrive already familiar with the Compass Model — warm, pre-educated referrals.</p>
+      </div>
+      <div class="dir-card">
+        <div class="dir-card__icon">✦</div>
+        <h4>Tiered Placement</h4>
+        <p>Certified Compass Clinicians receive top-tier placement and a featured profile. Trained clinicians are listed as Compass-Informed.</p>
+      </div>
+      <div class="dir-card">
+        <div class="dir-card__icon">📣</div>
+        <h4>Co-Marketing</h4>
+        <p>Level 3 certified clinicians are featured in TAT newsletter content, social media spotlights, and referral partner communications.</p>
+      </div>
+      <div class="dir-card">
+        <div class="dir-card__icon">📚</div>
+        <h4>Resource Access</h4>
+        <p>All certified clinicians access the full curriculum library, updated tools, and research resources as the Compass Model evolves.</p>
+      </div>
+      <div class="dir-card">
+        <div class="dir-card__icon">🤝</div>
+        <h4>Clinician Community</h4>
+        <p>Join a private network of Compass-trained clinicians for peer consultation, case support, and professional community.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="apply">
+  <div class="wrap">
+    <span class="label">How to Apply</span>
+    <div class="rule"></div>
+    <h2>Four steps from interest to certified.</h2>
+    <p class="lead" style="margin-top:.75rem;">The founding cohort opens May 2026. Applications are reviewed on a rolling basis.</p>
+    <div class="process__steps">
+      <div class="step">
+        <div class="step__num">1</div>
+        <h4>Submit Application</h4>
+        <p>Complete the short application form below. Takes 10 minutes. We review within 3 business days.</p>
+      </div>
+      <div class="step">
+        <div class="step__num">2</div>
+        <h4>Intro Call</h4>
+        <p>A 30-minute call with Megan to discuss your practice, your clients, and which tier is right for you.</p>
+      </div>
+      <div class="step">
+        <div class="step__num">3</div>
+        <h4>Enroll &amp; Pay</h4>
+        <p>Secure your spot with payment or a payment plan. Founding cohort pricing locks in at enrollment.</p>
+      </div>
+      <div class="step">
+        <div class="step__num">4</div>
+        <h4>Begin Training</h4>
+        <p>Cohort 1 begins May 2026. Virtual, cohort-based, live sessions with Megan and your peer group.</p>
+      </div>
+    </div>
+
+    <!-- APPLICATION FORM -->
+    <div style="max-width:640px; margin:4rem auto 0; background:var(--surface); border:1.5px solid var(--green); border-radius:1.25rem; padding:2.5rem;">
+      <h3 style="font-family:var(--display); font-size:1.5rem; font-weight:500; margin-bottom:.5rem;">Founding Cohort Application</h3>
+      <p style="font-size:.9rem; color:var(--muted); margin-bottom:1.75rem;">Applications for Cohort 1 are open now. Founding pricing available through June 1, 2026.</p>
+      <form action="mailto:hello@trustaftertrauma.com" method="POST" enctype="text/plain" style="display:flex; flex-direction:column; gap:1rem;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+          <div>
+            <label style="font-size:.8125rem; font-weight:600; display:block; margin-bottom:.375rem;">First Name</label>
+            <input type="text" name="first_name" required placeholder="Jane"
+              style="width:100%; padding:.75rem 1rem; border:1.5px solid var(--border); border-radius:.5rem; font-family:var(--body); font-size:.9375rem; background:var(--cream); color:var(--text);">
+          </div>
+          <div>
+            <label style="font-size:.8125rem; font-weight:600; display:block; margin-bottom:.375rem;">Last Name</label>
+            <input type="text" name="last_name" required placeholder="Smith"
+              style="width:100%; padding:.75rem 1rem; border:1.5px solid var(--border); border-radius:.5rem; font-family:var(--body); font-size:.9375rem; background:var(--cream); color:var(--text);">
+          </div>
+        </div>
+        <div>
+          <label style="font-size:.8125rem; font-weight:600; display:block; margin-bottom:.375rem;">Email Address</label>
+          <input type="email" name="email" required placeholder="jane@practice.com"
+            style="width:100%; padding:.75rem 1rem; border:1.5px solid var(--border); border-radius:.5rem; font-family:var(--body); font-size:.9375rem; background:var(--cream); color:var(--text);">
+        </div>
+        <div>
+          <label style="font-size:.8125rem; font-weight:600; display:block; margin-bottom:.375rem;">License / Credential</label>
+          <input type="text" name="credential" placeholder="LCSW, LPC, MFT, LMHC, Doctoral Candidate..."
+            style="width:100%; padding:.75rem 1rem; border:1.5px solid var(--border); border-radius:.5rem; font-family:var(--body); font-size:.9375rem; background:var(--cream); color:var(--text);">
+        </div>
+        <div>
+          <label style="font-size:.8125rem; font-weight:600; display:block; margin-bottom:.375rem;">Which tier are you interested in?</label>
+          <select name="tier" style="width:100%; padding:.75rem 1rem; border:1.5px solid var(--border); border-radius:.5rem; font-family:var(--body); font-size:.9375rem; background:var(--cream); color:var(--text);">
+            <option value="">Select a tier...</option>
+            <option value="level1">Level 1 — Compass Trained ($1,500)</option>
+            <option value="level2">Level 2 — Compass Practitioner ($3,500)</option>
+            <option value="level3">Level 3 — Compass Certified ($5,000)</option>
+            <option value="facilitator">Facilitator License Only ($750/yr)</option>
+            <option value="unsure">Not sure yet — want to discuss</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-size:.8125rem; font-weight:600; display:block; margin-bottom:.375rem;">Tell us about your practice and clients (2–3 sentences)</label>
+          <textarea name="practice" rows="4" placeholder="I'm a licensed therapist in private practice. I see mostly couples and individual clients dealing with infidelity and relationship betrayal..."
+            style="width:100%; padding:.75rem 1rem; border:1.5px solid var(--border); border-radius:.5rem; font-family:var(--body); font-size:.9375rem; background:var(--cream); color:var(--text); resize:vertical;"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top:.5rem;">Submit Application →</button>
+        <p style="font-size:.8rem; color:var(--muted); text-align:center; margin-top:.25rem;">We respond within 3 business days · hello@trustaftertrauma.com</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="wrap">
+    <span class="label">Questions</span>
+    <div class="rule"></div>
+    <h2>Frequently Asked</h2>
+    <div class="faq__grid" style="margin-top:2.5rem;">
+      <div class="faq-item">
+        <h4>Do I need to be a licensed therapist?</h4>
+        <p>Level 1 and Level 2 are open to licensed mental health professionals, registered associates, certified coaches, and doctoral students. Level 3 (Certified) requires an independent clinical license and supervised clinical hours.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What are the CE credit hours?</h4>
+        <p>CE credit application is currently submitted. We anticipate approval for Level 1 (12 CE hours) and Level 2 (24 additional CE hours). You will be notified of approval status at enrollment.</p>
+      </div>
+      <div class="faq-item">
+        <h4>When does the founding cohort start?</h4>
+        <p>Cohort 1 begins May 2026 (exact date confirmed at enrollment). Training is virtual, live, and cohort-based. Sessions are recorded for review but live attendance is expected.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Can I use the curriculum with my own clients?</h4>
+        <p>Level 1 includes clinical tools (assessment, session templates) for use with individual clients. The Group Facilitator License (included in Level 2 and Level 3) allows you to run licensed Compass Recovery Groups in your practice.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What's the difference between the Facilitator License and full certification?</h4>
+        <p>The Facilitator License allows you to run Compass groups using the curriculum. It's included in Level 2 and Level 3 pricing, and also available as a standalone renewal for $750/year. Certification (Levels 1–3) is the full clinical training pathway with designation and directory listing.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Are payment plans available?</h4>
+        <p>Yes. Level 1: 3 × $550. Level 2: 3 × $1,250. Level 3: 5 × $1,100. Payment plans are processed via Stripe and must be active at the start of training. Contact us to arrange a custom plan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="apply">
+  <div class="wrap wrap--narrow" style="text-align:center;">
+    <span class="label" style="color:rgba(255,255,255,.6); justify-content:center; display:flex;">Founding Cohort · May 2026</span>
+    <h2>Your clients need this. Your practice is ready.</h2>
+    <p>Founding cohort pricing closes June 1, 2026. Apply now to lock in your rate and secure your spot in Cohort 1.</p>
+    <div class="apply__btns">
+      <a href="#apply" class="btn btn-white">Apply for Founding Cohort</a>
+      <a href="mailto:hello@trustaftertrauma.com" class="btn btn-ghost">Email Us a Question</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">Trust After Trauma</div>
+        <div class="footer__tagline">Compass Recovery Model · Clinical Training &amp; Certification</div>
+        <div class="footer__crisis">
+          Crisis resources: <a href="tel:988">988</a> · <a href="tel:18007997233">1-800-799-7233</a> · Text HOME to <a href="sms:741741">741741</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Clinicians</div>
+        <ul class="footer__links">
+          <li><a href="#tiers">Certification Tiers</a></li>
+          <li><a href="#apply">Apply Now</a></li>
+          <li><a href="#directory">Directory</a></li>
+          <li><a href="mailto:hello@trustaftertrauma.com">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Platform</div>
+        <ul class="footer__links">
+          <li><a href="/">Trust After Trauma</a></li>
+          <li><a href="https://betrayalrecoverycompass.com" target="_blank" rel="noopener">The Compass Model</a></li>
+          <li><a href="https://trust-after-trauma.mn.co" target="_blank" rel="noopener">Community Portal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Trust After Trauma · A program of Seeding Treasures, 501(c)(3)</span>
+      <span>Created by Megan Burton, MHC-LP, ASAT · Doctoral Candidate</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
