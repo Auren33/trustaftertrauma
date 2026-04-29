@@ -526,8 +526,18 @@
     .audience-card:hover::before { opacity: 1; }
 
     .audience-card__icon {
-      font-size: 2rem;
-      line-height: 1;
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: rgba(90,138,106,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-primary);
+      transition: background 0.2s;
+    }
+    .audience-card:hover .audience-card__icon {
+      background: rgba(90,138,106,0.14);
     }
 
     .audience-card__headline {
@@ -606,8 +616,24 @@
     }
 
     .compass-card__direction {
-      font-size: 1.5rem;
       line-height: 1;
+    }
+    .compass-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .compass-card--center .compass-badge {
+      background: var(--color-accent);
     }
 
     .compass-card__label {
@@ -1231,7 +1257,9 @@
         <div class="audience-grid">
           <!-- Card 1 -->
           <article class="audience-card reveal">
-            <div class="audience-card__icon" aria-hidden="true">💚</div>
+            <div class="audience-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
             <h3 class="audience-card__headline">For Partners &amp; Survivors</h3>
             <p class="audience-card__body">The Compass Assessment helps you understand where you are in recovery and what you need right now. You don't have to navigate this alone.</p>
             <a href="/assessment.html" class="audience-card__cta">
@@ -1242,7 +1270,9 @@
 
           <!-- Card 2 -->
           <article class="audience-card reveal" style="transition-delay: 0.08s;">
-            <div class="audience-card__icon" aria-hidden="true">🤝</div>
+            <div class="audience-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
             <h3 class="audience-card__headline">For Couples</h3>
             <p class="audience-card__body">Our structured Recovery Compass program gives couples a roadmap from crisis to restored trust — whether you choose to stay together or not.</p>
             <a href="/couples.html" class="audience-card__cta">
@@ -1253,7 +1283,9 @@
 
           <!-- Card 3 -->
           <article class="audience-card reveal" style="transition-delay: 0.16s;">
-            <div class="audience-card__icon" aria-hidden="true">🎓</div>
+            <div class="audience-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
             <h3 class="audience-card__headline">For Clinicians</h3>
             <p class="audience-card__body">Become certified in the Compass Method. License it in your practice. Build a recurring income stream while doing transformative work.</p>
             <a href="/clinicians.html" class="audience-card__cta">
@@ -1279,7 +1311,7 @@
         <div class="compass-grid">
           <!-- CENTER -->
           <article class="compass-card compass-card--center reveal">
-            <div class="compass-card__direction" aria-hidden="true">🧭</div>
+            <div class="compass-card__direction" aria-hidden="true"><span class="compass-badge">C</span></div>
             <span class="compass-card__label">Center</span>
             <h3 class="compass-card__name">Discovery Shock</h3>
             <p class="compass-card__phase">The ICU Phase</p>
@@ -1288,7 +1320,7 @@
 
           <!-- NORTH -->
           <article class="compass-card reveal" style="transition-delay: 0.06s;">
-            <div class="compass-card__direction" aria-hidden="true">⬆️</div>
+            <div class="compass-card__direction" aria-hidden="true"><span class="compass-badge">N</span></div>
             <span class="compass-card__label">North</span>
             <h3 class="compass-card__name">Stabilization</h3>
             <p class="compass-card__phase">Months 1–3</p>
@@ -1297,7 +1329,7 @@
 
           <!-- EAST -->
           <article class="compass-card reveal" style="transition-delay: 0.12s;">
-            <div class="compass-card__direction" aria-hidden="true">➡️</div>
+            <div class="compass-card__direction" aria-hidden="true"><span class="compass-badge">E</span></div>
             <span class="compass-card__label">East</span>
             <h3 class="compass-card__name">Integration</h3>
             <p class="compass-card__phase">Making Meaning</p>
@@ -1306,7 +1338,7 @@
 
           <!-- SOUTH -->
           <article class="compass-card reveal" style="transition-delay: 0.18s;">
-            <div class="compass-card__direction" aria-hidden="true">⬇️</div>
+            <div class="compass-card__direction" aria-hidden="true"><span class="compass-badge">S</span></div>
             <span class="compass-card__label">South</span>
             <h3 class="compass-card__name">Healing</h3>
             <p class="compass-card__phase">Rebuilding Trust</p>
@@ -1315,7 +1347,7 @@
 
           <!-- WEST -->
           <article class="compass-card reveal" style="transition-delay: 0.24s;">
-            <div class="compass-card__direction" aria-hidden="true">⬅️</div>
+            <div class="compass-card__direction" aria-hidden="true"><span class="compass-badge">W</span></div>
             <span class="compass-card__label">West</span>
             <h3 class="compass-card__name">Beyond Betrayal</h3>
             <p class="compass-card__phase">1 Year+</p>
